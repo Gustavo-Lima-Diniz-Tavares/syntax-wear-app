@@ -5,6 +5,8 @@ import galeriaTenisColorido from "../../assets/images/galeria-tenis-colorido.jpg
 import galeriaTenisBrancoPeto from "../../assets/images/galeria-tenis-branco-e-preto.jpg";
 import galeriaTenisCinza from "../../assets/images/galeria-tenis-cinza.jpg";
 import styles from "./Gallery.module.css";
+import { Overlay } from "../Overlay";
+import { Button } from "../Button";
 
 export const Gallery = () => {
   return (
@@ -16,18 +18,14 @@ export const Gallery = () => {
             src={galeriaHomem}
             alt="Krypton One - Estilo urbano com atitude"
           />
-          <div className={styles.overlay}>
-            <div className={styles.textContent}>
-              <p className={styles.productName}>Krypton One</p>
-              <p className={styles.productDescription}>
-                Estilo urbano com atitude
-              </p>
-            </div>
-            <div className={styles.buttonGroup}>
-              <button className={styles.button}>Feminino</button>
-              <button className={styles.button}>Masculino</button>
-            </div>
-          </div>
+          <Overlay title="Krypton One" subtitle="Estilo urbano com atitude" className="inset-0 justify-center">
+            <Button variant="secondary">
+              Feminino
+            </Button>
+            <Button variant="secondary">
+              Masculino
+            </Button>
+          </Overlay>
         </div>
 
         <div className={`${styles.imageCard} ${styles.sneakerPurple} relative rounded-[20px] overflow-hidden`}>
